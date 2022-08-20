@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bouncing-balls
+  name: bouncing-balls
+  namespace: bouncing-balls
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bouncing-balls
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: bouncing-balls
+    spec:
+      containers:
+      - image: quay.io/rhdevelopers/bgd:latest
+        name: bouncing-balls
+        env:
+        - name: COLOR
+          value: "blue"

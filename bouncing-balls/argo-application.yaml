@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bouncing-balls-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: bouncing-balls
+    server: https://kubernetes.default.svc 
+  project: default 
+  source: 
+    path: apps/bouncing-balls/overlays/bouncing-balls
+    repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+    targetRevision: main
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
