@@ -2,13 +2,13 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: bouncing-balls
-  name: bouncing-balls
-  namespace: bouncing-balls
+    app: bubble-animation
+  name: bubble-animation
+  namespace: bubble-animation
 spec:
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: bouncing-balls
+    name: bubble-animation
     weight: 100

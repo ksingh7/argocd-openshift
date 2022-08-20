@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bouncing-balls-app
+  name: bubble-animation-app
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: bouncing-balls
+    namespace: bubble-animation
     server: https://kubernetes.default.svc 
   project: default 
   source: 
-    path: bouncing-balls/application-mainfest
+    path: bubble-animation/application-mainfest
     repoURL: https://github.com/ksingh7/argocd-openshift
     targetRevision: main
   syncPolicy: 

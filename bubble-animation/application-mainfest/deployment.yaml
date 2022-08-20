@@ -3,23 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bouncing-balls
-  name: bouncing-balls
-  namespace: bouncing-balls
+    app: bubble-animation
+  name: bubble-animation
+  namespace: bubble-animation
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bouncing-balls
+      app: bubble-animation
   strategy: {}
   template:
     metadata:
       labels:
-        app: bouncing-balls
+        app: bubble-animation
     spec:
       containers:
       - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bouncing-balls
+        name: bubble-animation
         env:
         - name: COLOR
           value: "blue"
