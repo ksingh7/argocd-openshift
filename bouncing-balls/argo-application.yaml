@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc 
   project: default 
   source: 
-    path: apps/bouncing-balls/overlays/bouncing-balls
-    repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+    path: bouncing-balls/application-mainfest
+    repoURL: https://github.com/ksingh7/argocd-openshift
     targetRevision: main
   syncPolicy: 
     automated:

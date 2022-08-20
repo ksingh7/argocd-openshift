@@ -18,7 +18,7 @@ spec:
         app: bouncing-balls
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:latest
+      - image: quay.io/rhdevelopers/bgd:1.0.0
         name: bouncing-balls
         env:
         - name: COLOR
